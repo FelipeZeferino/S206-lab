@@ -18,7 +18,6 @@ describe('User Auth', () => {
     cy.get('#Text1').type('Zeferino');
     cy.get('#username').type('felipemsz');
     cy.get('.btn-primary').should('be.disabled');
-    // cy.get('.ng-binding').should('contain.text', 'Registration successful');
 })
 it('login success', () => {
   let { id, password } = createUser();
@@ -53,7 +52,6 @@ function createUser() {
   let seconds = new Date().getSeconds().toString();
   let id = hour + minutes + seconds + 'id';
   let password = hour + minutes + seconds + 'senha';
-  let infos = [id, password];
 
   cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');
   cy.get('.btn-link').click();

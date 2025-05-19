@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-19T22:21:34.413Z",
+    "end": "2025-05-19T22:21:51.850Z",
+    "duration": 17437,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ec1e1b41-aaae-49e6-8c36-3b185efd8dc0",
+      "title": "",
+      "fullFile": "cypress/e2e/aula2.cy.js",
+      "file": "cypress/e2e/aula2.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8113a3ea-ebd2-428b-b231-21cafb81fa66",
+          "title": "User Auth",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User creation success",
+              "fullTitle": "User Auth User creation success",
+              "timedOut": null,
+              "duration": 3802,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('.btn-link').click();\ncy.get('#firstName').type('Felipe');\ncy.get('#Text1').type('Zeferino');\ncy.get('#username').type('felipemsz');\ncy.get('#password').type('teste123');\ncy.get('.btn-primary').click();\ncy.get('.ng-binding').should('contain.text', 'Registration successful');",
+              "err": {},
+              "uuid": "83fa8ce5-8793-4e86-8c76-2ec6cd7ee85e",
+              "parentUUID": "8113a3ea-ebd2-428b-b231-21cafb81fa66",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User creation fail",
+              "fullTitle": "User Auth User creation fail",
+              "timedOut": null,
+              "duration": 1433,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('.btn-link').click();\ncy.get('#firstName').type('Felipe');\ncy.get('#Text1').type('Zeferino');\ncy.get('#username').type('felipemsz');\ncy.get('.btn-primary').should('be.disabled');",
+              "err": {},
+              "uuid": "aff90df2-681b-4f2b-8dc1-c3ceb43be1bb",
+              "parentUUID": "8113a3ea-ebd2-428b-b231-21cafb81fa66",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login success",
+              "fullTitle": "User Auth login success",
+              "timedOut": null,
+              "duration": 4527,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let {\n  id,\n  password\n} = createUser();\ncy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('#username').type(id);\ncy.get('#password').type(password);\ncy.get('.btn-primary').click();\ncy.get('h1.ng-binding').should('contain.text', id);",
+              "err": {},
+              "uuid": "d59c2457-ce26-4d03-9533-44eb357a120f",
+              "parentUUID": "8113a3ea-ebd2-428b-b231-21cafb81fa66",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login and delete user and login again fail",
+              "fullTitle": "User Auth login and delete user and login again fail",
+              "timedOut": null,
+              "duration": 6217,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let {\n  id,\n  password\n} = createUser();\ncy.visit('https://globalsqa.com/angularJs-protractor/registration-login-example/#/login');\ncy.get('#username').type(id);\ncy.get('#password').type(password);\ncy.get('.btn-primary').click();\ncy.get('h1.ng-binding').should('contain.text', id);\ncy.get('.ng-binding > a').click();\ncy.get('.btn').click();\ncy.get('#username').type(id);\ncy.get('#password').type(password);\ncy.get('.btn-primary').click();\ncy.get('.ng-binding').should('contain.text', 'Username or password is incorrect');",
+              "err": {},
+              "uuid": "a8ef8e42-08b0-4949-8468-b704846db96b",
+              "parentUUID": "8113a3ea-ebd2-428b-b231-21cafb81fa66",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83fa8ce5-8793-4e86-8c76-2ec6cd7ee85e",
+            "aff90df2-681b-4f2b-8dc1-c3ceb43be1bb",
+            "d59c2457-ce26-4d03-9533-44eb357a120f",
+            "a8ef8e42-08b0-4949-8468-b704846db96b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15979,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
