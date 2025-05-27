@@ -1,0 +1,16 @@
+{
+  "name": "19_05",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "newman run Aula19_05.postman_collection.json -e AulaS206.postman_environment.json -r htmlextra"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
